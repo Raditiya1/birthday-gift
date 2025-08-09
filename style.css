@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  overflow: hidden;
+  background: black;
+  color: white;
+  font-family: monospace;
+}
+
+canvas#matrix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+#countdown {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 120px;
+  font-weight: bold;
+  z-index: 2;
+  color: #fff;
+  text-shadow:
+    0 0 10px #ff69b4,
+    0 0 20px #ff69b4,
+    0 0 40px #ff69b4,
+    0 0 80px #ff1493,
+    0 0 160px #ff69b4;
+  letter-spacing: 5px;
+  /* animation: glowDots 1s infinite alternate; */
+}
+
+@keyframes glowDots {
+  0% { text-shadow: 0 0 5px #ff69b4; }
+  100% { text-shadow: 0 0 20px #ff69b4, 0 0 40px #ff1493; }
+}
+
+#typing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 3;
+}
+
+#typed-text {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #ff9bcdff;
+  text-shadow:
+    0 0 10px #f485bdff,
+    0 0 20px #ff69b4,
+    0 0 30px #ff1493;
+  transition: all 0.5s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+.book {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 200px;
+  background: #fff;
+  z-index: 5;
+  box-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
+  animation: openBook 1s ease-out forwards;
+  display: flex;
+  flex-direction: row;
+}
+
+.page {
+  flex: 1;
+  margin: 10px;
+  padding: 15px;
+  background: #fefefe;
+  color: #000;
+  font-size: 0.9rem;
+  box-shadow: inset 0 0 10px #ccc;
+}
+
+@keyframes openBook {
+  from { transform: translateX(-50%) scaleX(0); opacity: 0; }
+  to { transform: translateX(-50%) scaleX(1); opacity: 1; }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday AZIQhA DEANDRA GUMAY</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+
+  <!-- Countdown -->
+  <div id="countdown">3</div>
+
+  <!-- Typing Word -->
+  <div id="typing" class="hidden">
+    <span id="typed-text"></span>
+  </div>
+
+  <!-- Buku Interaktif -->
+  <div id="book-container" class="hidden">
+    <div class="book-closed" id="book-cover">📕 Klik untuk buka</div>
+    <div class="book-open hidden" id="book">
+      <div class="page" id="page-text">Selamat ulang tahun AZIQHA DEANDRA GUMAY</div>
+      <div class="nav-buttons">
+        <button id="prev-btn">⬅️</button>
+        <button id="next-btn">➡️</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Musik -->
+  <audio id="bg-music" autoplay loop>
+    <source src="https://example.com/happy-birthday.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
